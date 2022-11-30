@@ -7,7 +7,7 @@ class Piece
         @board = board
         @pos = pos
     end
-
+    # @board.validposition
     def to_s
         self.symbol.colorize(@color)
     end
