@@ -12,7 +12,22 @@ class Piece
         self.symbol.colorize(@color)
     end
 
-    def valid_moves
+    def empty?
+        return true if self.is_a?(NullPiece)
+        false
+    end
+
+    def valid_moves  #what is this
+        valid = []
+        @board.each_with_index do |row, i|
+            row.each_with_index do |piece, j|
+                position = [i, j]
+                if piece.empty? || self.color != piece.color
+                    valid << position
+                end
+            end
+        end
+
     end
 
     def symbol
