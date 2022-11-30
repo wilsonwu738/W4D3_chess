@@ -1,4 +1,5 @@
 require_relative "piece"
+require_relative "pawn"
 class Board
   attr_accessor :grid
   def initialize
@@ -11,10 +12,11 @@ class Board
       if i < 2 || i > 5
         row.each_with_index do |ele, j|
           position = i, j
-          if i < 2
-            self[position] = "Black"
-          else
-            self[position] = "White"
+          case i
+          when i == 1 
+            self[position] = Pawn.new(:black, self, position).to_s
+          when i == 6
+            self[position] = Pawn.new(:white, self, position).to_s
           end
         end
         # Piece.new(black, self, )
