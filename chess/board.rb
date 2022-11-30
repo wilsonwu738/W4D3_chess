@@ -17,6 +17,7 @@ class Board
             self[position] = "White"
           end
         end
+        # Piece.new(black, self, )
       end
     end
     

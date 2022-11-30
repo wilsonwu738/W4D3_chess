@@ -1,7 +1,15 @@
 class Piece 
-    def initialize
-        @name = nil
-        @color = nil
+    def initialize(color, board, pos)
+        @color = color
+        @board = board
+        @pos = pos
     end
 
+    def to_s
+    end
+
+    def valid_moves
+    end
+
+    
 end
