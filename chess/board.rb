@@ -12,11 +12,10 @@ class Board
       if i < 2 || i > 5
         row.each_with_index do |ele, j|
           position = i, j
-          case i
-          when i == 1 
-            self[position] = Pawn.new(:black, self, position).to_s
-          when i == 6
-            self[position] = Pawn.new(:white, self, position).to_s
+          if i < 2 
+            self[position] = "Black" #Pawn.new(:black, self, position).to_s
+          else
+            self[position] = "White" #Pawn.new(:white, self, position).to_s
           end
         end
         # Piece.new(black, self, )
