@@ -12,7 +12,7 @@ module Stepable
         moves_arr << new_postion
       end
     end
-
+#test push
   end
 
 
